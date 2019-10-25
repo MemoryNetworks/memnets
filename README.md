@@ -73,28 +73,11 @@ libraryDependencies  ++= Seq(
 </dependency>
 ...
 ```
-### Project structure
-
-- api 
-   - core library is UI agnostic
-- models 
-   - numerous pre-built scientific models using only api in StandardLibrary.scala
-   - if you would like to share a model, contribute it to CommunityLibrary.scala
-- awt 
-   - example app in Swing/AWT.
-   - parts used by other two UI projects
-- fx 
-   - primary app development
-   - can be built using JavaFX 8, 11, or 12
-- lwjgl 
-   - example app in SWT+OpenGL
-   - jars not published
-
-NOTE: most of the examples use the StandardLibrary, e.g., running LorentFX, JLorentz, or LorentzGL will all allow you to select other models
 
 ## Documentation
 
-* https://github.com/MemoryNetworks/memnets/wiki
+*  See [Project Wiki](https://github.com/MemoryNetworks/memnets/wiki)
+*  See [Structure page](https://github.com/MemoryNetworks/memnets/wiki/Project-Structure) to determine which jars you need
 
 ## Building/running yourself
 
@@ -123,5 +106,6 @@ sbt "project fx" "run"
 5. Build fully imported project
 6. Navigate to fx/src/main/scala/memnets.fx.demo/DemosFX.scala and right-click to run 
 
+*NOTE: see the [Project Wiki](https://github.com/MemoryNetworks/memnets/wiki) for more on  IntelliJ* 
 
 (c) Memory Networks, 2019
