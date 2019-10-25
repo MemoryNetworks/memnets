@@ -2,10 +2,6 @@
 
 MemNets is a framework for numerical simulations and games written in Scala, with Kotlin and Java friendly bindings. 
 
-The latest release is 1.0.0, which is cross-built against 2.12 and 2.13
-
-*not published to Maven Central yet.  coming soon*
-
 ## Example 
 
 Building an oscillator using the sparse variable DSL:
@@ -44,6 +40,12 @@ Building an oscillator using the sparse variable DSL:
 ```
 ------------
 
+The latest release is 1.0.0
+   * JavaFX 8 (default) uses scala 2.12 
+   * JavaFX 12 cross-built against scala 2.12 and 2.13 
+
+*not published to Maven Central yet.  coming soon*
+
 ### SBT
 
 Add these lines (or only the ones you need) to your SBT project definition 
@@ -52,8 +54,10 @@ libraryDependencies  ++= Seq(
   "com.memnets" %% "api" % "1.0.0",
   "com.memnets" %% "models" % "1.0.0",
   "com.memnets" %% "awt" % "1.0.0",
-  // for JavaFX
+  // for JavaFX 8 (default)
   "com.memnets" %% "fx" % "1.0.0"
+  // for JavaFX 12
+  // "com.memnets" %% "fx" % "1.0.0_12.0.2"
 )
 ```
 *other jars are not published.  can use `sbt publishLocal`*
