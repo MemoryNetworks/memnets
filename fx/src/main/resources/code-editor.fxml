@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<BorderPane fx:id="editPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+        <URL value="@code-editor.css"/>
+        <URL value="@code-keywords.css"/>
+        <URL value="@glyph.css"/>
+    </stylesheets>
+    <top>
+        <BorderPane prefHeight="70.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <top>
+                <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+                    <menus>
+                        <Menu fx:id="fileMenu" mnemonicParsing="false" text="_File">
+                            <items>
+                                <MenuItem fx:id="newMI" mnemonicParsing="false" text="New"/>
+                                <MenuItem fx:id="openMI" mnemonicParsing="false" text="Open"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem fx:id="saveMI" mnemonicParsing="false" text="Save"/>
+                                <MenuItem fx:id="saveasMI" mnemonicParsing="false" text="SaveAs"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem fx:id="importcsvMI" mnemonicParsing="false" text="Import"/>
+                                <MenuItem fx:id="exportcsvMI" mnemonicParsing="false" text="export"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem fx:id="closeeditorMI" mnemonicParsing="false" text="Close"/>
+                            </items>
+                        </Menu>
+                        <Menu fx:id="editMenu" mnemonicParsing="false" text="_Edit">
+                            <items>
+                                <MenuItem fx:id="undoMI" mnemonicParsing="false" text="Undo"/>
+                                <MenuItem fx:id="redoMI" mnemonicParsing="false" text="Redo"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem fx:id="cutMI" mnemonicParsing="false" text="Cut"/>
+                                <MenuItem fx:id="copyMI" mnemonicParsing="false" text="Copy"/>
+                                <MenuItem fx:id="pasteMI" mnemonicParsing="false" text="Paste"/>
+                                <MenuItem fx:id="deleteMI" mnemonicParsing="false" text="Delete"/>
+                                <SeparatorMenuItem mnemonicParsing="false"/>
+                                <MenuItem fx:id="selectallMI" mnemonicParsing="false" text="Select All"/>
+                                <MenuItem fx:id="selectnoneMI" mnemonicParsing="false" text="Select None"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Run">
+                            <items>
+                                <MenuItem fx:id="runMI" mnemonicParsing="false" text="Run"/>
+                            </items>
+                        </Menu>
+                        <Menu fx:id="optionsMenu" mnemonicParsing="false" text="Options">
+                            <items>
+                                <CheckMenuItem fx:id="wordwrapMI" mnemonicParsing="false" text="Word Wrap"/>
+                                <CheckMenuItem fx:id="transparentMI" mnemonicParsing="false" text="Transparent"/>
+                            </items>
+                        </Menu>
+                        <Menu fx:id="helpMenu" mnemonicParsing="false" text="_Help">
+                            <items>
+                                <MenuItem fx:id="projectMI" mnemonicParsing="false" text="Project"/>
+                                <MenuItem fx:id="wikiMI" mnemonicParsing="false" text="Wiki"/>
+                                <MenuItem fx:id="licenseMI" mnemonicParsing="false" text="License"/>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+            <center>
+                <ToolBar fx:id="editToolBar" BorderPane.alignment="CENTER">
+                    <items>
+                        <Button fx:id="newAction" focusTraversable="false" mnemonicParsing="false" text="New"/>
+                        <Button fx:id="openAction" focusTraversable="false" mnemonicParsing="false" text="Open"/>
+                        <Button fx:id="saveAction" focusTraversable="false" mnemonicParsing="false" text="Save"/>
+                        <Separator prefWidth="30.0"/>
+                        <Button fx:id="cutAction" focusTraversable="false" mnemonicParsing="false" text="Cut"/>
+                        <Button fx:id="copyAction" focusTraversable="false" mnemonicParsing="false" text="Copy"/>
+                        <Button fx:id="pasteAction" focusTraversable="false" mnemonicParsing="false" text="Paste"/>
+                        <Separator prefWidth="30.0"/>
+                        <Button fx:id="undoAction" focusTraversable="false" mnemonicParsing="false" text="Undo"/>
+                        <Button fx:id="redoAction" focusTraversable="false" mnemonicParsing="false" text="Redo"/>
+                        <Separator prefWidth="30.0"/>
+                        <Button fx:id="runAction" focusTraversable="false" mnemonicParsing="false" prefWidth="48.0"
+                                text="Run"/>
+                    </items>
+                </ToolBar>
+            </center>
+        </BorderPane>
+    </top>
+</BorderPane>

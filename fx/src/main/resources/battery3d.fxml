@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<Group cacheHint="QUALITY" stylesheets="@battery.css" xmlns="http://javafx.com/javafx/8"
+       xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Rectangle fx:id="fill" fill="#fa07c2" height="72.0" stroke="TRANSPARENT" strokeType="INSIDE" width="72.0"
+                   y="9.0"/>
+        <Rectangle fx:id="body" height="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.05" styleClass="glass"
+                   width="72.0" y="9.0"/>
+        <BorderPane layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                    pickOnBounds="false" prefHeight="72.0" prefWidth="72.0" rotate="-90.0" scaleY="1.1"
+                    styleClass="metal">
+            <center>
+                <Text fx:id="text" cacheHint="QUALITY" fill="#bfbfbfe5" stroke="#00000080" strokeWidth="0.5"
+                      text="Learn" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="Tahoma Bold" size="21.0"/>
+                    </font>
+                    <effect>
+                        <InnerShadow blurType="GAUSSIAN" choke="0.2" color="#000000cc" height="3.0" offsetY="1.0"
+                                     radius="1.0" width="3.0"/>
+                    </effect>
+                    <BorderPane.margin>
+                        <Insets/>
+                    </BorderPane.margin>
+                </Text>
+            </center>
+        </BorderPane>
+        <Rectangle fx:id="mark1" fill="#ffffff66" height="3.0" stroke="#00000080" strokeWidth="0.25" width="22.0"
+                   x="6.0" y="24.0">
+            <effect>
+                <InnerShadow height="1.0" offsetX="1.0" offsetY="1.0" radius="0.0" width="1.0"/>
+            </effect>
+        </Rectangle>
+        <Rectangle fx:id="mark2" fill="#ffffff66" height="3.0" stroke="#00000080" strokeWidth="0.25" width="22.0"
+                   x="6.0" y="43.0">
+            <effect>
+                <InnerShadow height="1.0" offsetX="1.0" offsetY="1.0" radius="0.0" width="1.0"/>
+            </effect>
+        </Rectangle>
+        <Rectangle fx:id="mark3" fill="#ffffff66" height="3.0" stroke="#00000080" strokeWidth="0.25" width="22.0"
+                   x="6.0" y="63.0">
+            <effect>
+                <InnerShadow height="1.0" offsetX="1.0" offsetY="1.0" radius="0.0" width="1.0"/>
+            </effect>
+        </Rectangle>
+    </children>
+</Group>

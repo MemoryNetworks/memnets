@@ -1,0 +1,25 @@
+.bubble-pane {
+  -fx-background: transparent;
+}
+.bubble-main {
+  -fx-fill: linear-gradient(to bottom, 
+      rgba(100%,100%,100%,0.0470588235) 0%, 
+      rgba(100%,100%,100%,0.0470588235) 90%,
+      rgba(100%,100%,100%,0.0745098039) 94%,
+      rgba(100%,100%,100%,0.6980392157) 100%
+      );
+}
+.bubble-frame {
+  -fx-fill:	radial-gradient(center 50% 50%,radius 100%, 
+      transparent 0%, 
+      transparent 40%, 
+      rgba(100%,100%,100%,0.6549019608) 90%, 
+      rgba(100%,100%,100%,0.7980392157) 100% 
+      );
+}
+.bubble-highlight {
+  -fx-fill: linear-gradient(to bottom, 
+      rgba(100%,100%,100%,0.6980392157) 0%, 
+      rgba(100%,100%,100%,0.0) 100%
+      );
+}

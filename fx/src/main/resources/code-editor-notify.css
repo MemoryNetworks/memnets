@@ -1,0 +1,14 @@
+.notification-bar>.pane {
+    -fx-background-color: rgba(0,0,0,0.5);
+    -fx-background-insets: 0;
+}
+.notification-bar>.pane .title {
+    -fx-font-size: 20px;
+    -fx-text-fill: rgba(255,0,0,0.6);
+    -fx-font-weight: bold;
+}
+.notification-bar>.pane .label {
+    -fx-font-size: 14px;
+    -fx-text-fill: rgba(255,0,0,0.6);
+  //  -fx-alignment: top-left;
+}

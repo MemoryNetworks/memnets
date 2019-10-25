@@ -1,0 +1,105 @@
+.dialog-pane {
+  -fx-base: #111;
+  -fx-focus-color: rgba(0,0,255,0.15);
+  -fx-memnets: #8C5FD2;
+  -fx-border-width: 1;
+  -fx-border-color: derive(-fx-memnets,-50%);
+  -fx-background-color: derive(-fx-base,-10%);
+  -fx-control-inner-background: derive(-fx-base,+20%);
+  -fx-graphic: url("memnet_icon320.png");
+}
+.dialog-pane .label {
+  -fx-font-family: "Verdana";
+  -fx-text-fill: #ddd;
+  -fx-font-size: 16px;
+  -fx-font-style: italic;
+}
+.dialog-pane:header .header-panel .label {
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+  -fx-font-style: italic;
+}
+
+.button {
+  -fx-text-fill: #bbb;
+  -fx-base: #111;
+  // memnet-color
+  -fx-focus-color: #8C5FD2;
+  -fx-shadow-highlight-color: #000;
+}
+
+.progress-bar {
+ // memcol
+//  -fx-accent: #8C5FD2;
+ -fx-accent: #ae00ff;
+ -fx-scale-y: 0.6;
+}
+
+.progress-bar > .bar {
+ -fx-opacity: 1.0;
+  -fx-fire-tgt-color: -fx-accent;
+// -fx-background-color:
+ //       transparent,
+  //      linear-gradient(to right, derive(-fx-fire-tgt-color,85%), derive(-fx-fire-tgt-color,-40%)),
+   //     linear-gradient(to left, derive(-fx-fire-tgt-color,48%), -fx-fire-tgt-color);
+ -fx-background-insets: 1, 2, 5;
+ -fx-background-radius: 10;
+}
+
+.progress-bar > .track {
+  -fx-border-radius: 10;
+  -fx-border-width: 1;
+  -fx-border-color: rgba(255,255,255,0.8);
+  -fx-background-color: rgba(255,255,255,0.1);
+  -fx-background-radius: 10;
+}
+
+// used by error dialog
+
+.details-button {
+  -fx-base: #111;
+  -fx-font-family: "Verdana";
+ // -fx-background-color: #222;
+  -fx-text-fill: #aaa;
+}
+
+
+/*
+.content {
+  -fx-graphic: url("memnet_icon320.png");
+  -imageUrl : url("memnet_icon320.png");
+}
+.graphic-container {
+  -fx-graphic: url("memnet_icon320.png");
+  -imageUrl : url("memnet_icon320.png");
+}
+
+.dialog-pane > .content.label {
+   -fx-padding: 0.5em 0.5em 0.5em 0.5em;
+   -fx-background-color: yellow;
+   -fx-text-fill:black;
+   -fx-font-size:15.0px;
+}
+.dialog-pane:header .header-panel {
+  -fx-background-color: black;
+}
+
+.dialog-pane:header .header-panel .label{
+  -fx-background-color: yellow;
+  -fx-background-radius:10px;
+  -fx-text-fill:black;
+  -fx-font-size:15.0px;
+}
+.dialog-pane .button{
+   -fx-background-color:black;
+   -fx-text-fill:white;
+   -fx-wrap-text: true;
+   -fx-effect: dropshadow( three-pass-box, yellow, 10.0, 0.0, 0.0, 0.0);
+   -fx-cursor:hand;
+ }
+.dialog-pane .button:hover{
+  -fx-background-color:white;
+  -fx-text-fill:black;
+  -fx-font-weight:bold;
+ }
+ */

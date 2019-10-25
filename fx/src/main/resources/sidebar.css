@@ -1,0 +1,79 @@
+#sidebar {
+  -fx-opacity: 0.85;
+  -fx-base: #111;
+  -fx-dark: #000;
+  -fx-focus-color: rgba(0,0,255,0.15);
+  -fx-background-color: derive(-fx-base,-10%);
+  -fx-control-inner-background: derive(-fx-base,+10%);
+  -slider-light: rgba(255,255,255,0.7);
+  -slider-dark: rgba(0,0,0,0.3);
+  -fx-fill-kj: rgba(255,255,255,0.8);
+  -fx-stroke-kj: rgba(0,0,0,0.6);
+  -fx-text-fill-kj: rgba(255,255,255,0.8);
+  -fx-memnets: #8C5FD2;
+  -fx-memnets-highlight: derive(-fx-memnets,+20%);
+}
+#sideanchor {
+ -fx-background-color: transparent;
+}
+.tooltip {
+  -fx-opacity: 0.8;
+  -fx-background-color: linear-gradient(#444, #222);
+  -fx-font: bold 14 Tahoma;
+}
+.tool-bar:horizontal  {
+  -fx-background-color: null;
+}
+.button {
+  -fx-background-color: null;
+  -fx-pref-width: 48px;
+}
+.toggle-button {
+  -fx-background-color: null;
+  -fx-pref-width: 48px;
+}}
+.tab-pane {
+  -fx-background-color: null;
+}
+.tab-header-background {
+  -fx-background-color: null;
+}
+.tab-content-area {
+  -fx-padding: 10 0 0 0;
+}
+.tab-content-area .text {
+  -fx-text-alignment: center;
+  -fx-font-family: "Tahoma";
+  -fx-fill: derive(-fx-base,+140%);
+  -fx-font-smoothing-type: lcd;
+}
+.tab:top {
+  -fx-background-color: null;
+}
+.tab:top .text {
+  -fx-fill: derive(-fx-base,+80%);
+}
+.tab:selected:top .text {
+  -fx-fill: derive(-fx-base,+140%);
+}
+.tab:hover:top .text {
+  -fx-fill: derive(-fx-base,+200%);
+}
+
+// hide horizontal scroll bars
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-arrow,
+.table-view *.scroll-bar:horizontal *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}

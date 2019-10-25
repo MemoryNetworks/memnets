@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+<BorderPane id="sidebar" fx:id="sideBorder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="720.0" prefWidth="310.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <StackPane fx:id="showPane" cache="true" prefHeight="150.0" prefWidth="320.0" BorderPane.alignment="CENTER">
+            <children>
+                <Text fx:id="focusText" fill="WHITE" fontSmoothingType="LCD" mouseTransparent="true" opacity="0.5"
+                      strokeType="OUTSIDE" strokeWidth="0.0" text="Y2: 12.04" StackPane.alignment="CENTER">
+                    <font>
+                        <Font name="Tahoma Bold" size="22.0"/>
+                    </font>
+                    <StackPane.margin>
+                        <Insets bottom="20.0"/>
+                    </StackPane.margin>
+                </Text>
+                <ToggleButton fx:id="showBtn" cache="true" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0"
+                              minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0"
+                              prefWidth="50.0" styleClass="menu-btn" text="Menu" StackPane.alignment="CENTER_LEFT">
+                    <effect>
+                        <InnerShadow color="#00000080" height="10.0" offsetX="3.0" offsetY="2.0" radius="4.5"
+                                     width="10.0"/>
+                    </effect>
+                </ToggleButton>
+                <Label fx:id="speedLbl" alignment="CENTER" cache="true" minHeight="-Infinity" minWidth="-Infinity"
+                       opacity="0.5" prefHeight="38.0" prefWidth="120.0" text="SPEED 1/1" textAlignment="CENTER"
+                       StackPane.alignment="BOTTOM_CENTER">
+                    <font>
+                        <Font name="Tahoma Bold" size="13.0"/>
+                    </font>
+                    <StackPane.margin>
+                        <Insets bottom="33.0"/>
+                    </StackPane.margin>
+                </Label>
+                <ToolBar fx:id="toolBar" cache="true" StackPane.alignment="BOTTOM_CENTER">
+                    <items>
+                        <HBox spacing="1.0">
+                            <children>
+                                <Button fx:id="prevAction" mnemonicParsing="false" text="Prev"/>
+                                <Button fx:id="decAction" mnemonicParsing="false" text="Dec"/>
+                                <ToggleButton fx:id="playAction" mnemonicParsing="false" text="Play"/>
+                                <Button fx:id="incAction" mnemonicParsing="false" text="Inc"/>
+                                <Button fx:id="nextAction" mnemonicParsing="false" text="Next"/>
+                                <ToggleButton fx:id="loopAction" mnemonicParsing="false" prefWidth="48.0" text="Loop"/>
+                            </children>
+                        </HBox>
+                    </items>
+                </ToolBar>
+                <Pane mouseTransparent="true" opacity="0.8" prefHeight="200.0" prefWidth="200.0" styleClass="glass-pane"
+                      StackPane.alignment="CENTER"/>
+                <ToolBar fx:id="zoomBar" cache="true" StackPane.alignment="TOP_CENTER">
+                    <items>
+                        <HBox spacing="1.0">
+                            <children>
+                                <ToggleButton fx:id="fullscreenAction" mnemonicParsing="false" text="Full"/>
+                                <Separator prefWidth="97.0"/>
+                                <Button fx:id="zoomoutAction" mnemonicParsing="false" text="ZmO"/>
+                                <Button fx:id="zoom10Action" mnemonicParsing="false" text="ZmR"/>
+                                <Button fx:id="zoominAction" mnemonicParsing="false" text="ZmI"/>
+                            </children>
+                        </HBox>
+                    </items>
+                    <StackPane.margin>
+                        <Insets/>
+                    </StackPane.margin>
+                </ToolBar>
+            </children>
+        </StackPane>
+    </top>
+    <center>
+        <BorderPane id="controlsPane" prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <center>
+                <StackPane fx:id="tabStackPane" stylesheets="@param-editor.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" StackPane.alignment="CENTER">
+                            <tabs>
+                                <Tab fx:id="trialTab" closable="false" text="Trial">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <FlowPane fx:id="trialFlow" columnHalignment="CENTER"
+                                                          orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0"
+                                                          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                                          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <TableView fx:id="trialTable" maxHeight="1.7976931348623157E308"
+                                                                   minHeight="120.0" prefHeight="220.0"
+                                                                   prefWidth="304.0">
+                                                            <columns>
+                                                                <TableColumn prefWidth="140.6666717529297" text="C1"/>
+                                                                <TableColumn minWidth="0.0"
+                                                                             prefWidth="139.3333282470703" text="C2"/>
+                                                            </columns>
+                                                        </TableView>
+                                                        <Label alignment="CENTER" text="Inputs">
+                                                            <FlowPane.margin>
+                                                                <Insets bottom="5.0" top="5.0"/>
+                                                            </FlowPane.margin>
+                                                        </Label>
+                                                        <TableView fx:id="inputTable" maxHeight="1.7976931348623157E308"
+                                                                   minHeight="120.0" prefHeight="220.0"
+                                                                   prefWidth="304.0">
+                                                            <columns>
+                                                                <TableColumn prefWidth="75.0" text="C1"/>
+                                                                <TableColumn prefWidth="75.0" text="C2"/>
+                                                            </columns>
+                                                        </TableView>
+                                                    </children>
+                                                </FlowPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                                <Tab fx:id="paramTab" closable="false" text="Param">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                                    prefWidth="200.0"/>
+                                    </content>
+                                </Tab>
+                                <Tab fx:id="skinTab" closable="false" text="Skin">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                                    prefWidth="200.0"/>
+                                    </content>
+                                </Tab>
+                                <Tab fx:id="configTab" text="Conf">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                                    prefWidth="200.0"/>
+                                    </content>
+                                </Tab>
+                                <Tab fx:id="env3dTab" closable="false" text="3D">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                                    prefWidth="200.0"/>
+                                    </content>
+                                </Tab>
+                                <Tab fx:id="dataTab" closable="false" text="Data">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
+                                                    prefWidth="200.0"/>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                            <StackPane.margin>
+                                <Insets left="2.0" right="2.0"/>
+                            </StackPane.margin>
+                        </TabPane>
+                        <Pane cache="true" mouseTransparent="true" opacity="0.8" styleClass="glass-pane"
+                              StackPane.alignment="CENTER"/>
+                    </children>
+                </StackPane>
+            </center>
+            <top>
+                <StackPane prefHeight="45.0" BorderPane.alignment="TOP_CENTER">
+                    <children>
+                        <ToolBar fx:id="libBar" cache="true" prefHeight="45.0" StackPane.alignment="TOP_LEFT">
+                            <items>
+                                <HBox spacing="1.0">
+                                    <children>
+                                        <Button fx:id="libraryAction" mnemonicParsing="false" text="Lib"/>
+                                        <ToggleButton fx:id="editAction" mnemonicParsing="false" text="Edit"/>
+                                        <Button fx:id="rebuildAction" mnemonicParsing="false" text="Data"/>
+                                        <ToggleButton fx:id="validateAction" mnemonicParsing="false" text="Valid"/>
+                                        <Separator prefWidth="48.0"/>
+                                        <Button fx:id="refreshskinAction" mnemonicParsing="false" text="Refresh"/>
+                                    </children>
+                                </HBox>
+                            </items>
+                            <StackPane.margin>
+                                <Insets/>
+                            </StackPane.margin>
+                        </ToolBar>
+                        <Pane cache="true" mouseTransparent="true" opacity="0.8" prefHeight="200.0" prefWidth="200.0"
+                              styleClass="glass-pane"/>
+                    </children>
+                </StackPane>
+            </top>
+        </BorderPane>
+    </center>
+    <stylesheets>
+        <URL value="@sidebar.css"/>
+        <URL value="@texture.css"/>
+        <URL value="@glyph.css"/>
+    </stylesheets>
+</BorderPane>

@@ -1,0 +1,13 @@
+.menu-btn {
+  -fx-graphic: url("Menu-Filled-50.png");
+  -fx-opacity: 0.3;
+  -fx-background-color: rgba(0,0,0,0.7);
+  -fx-min-height: 50px;
+  -fx-min-width: 50px;
+}
+.menu-btn:hover  {
+    -fx-opacity: 0.8;
+}
+.menu-btn:selected  {
+    -fx-opacity: 0.6;
+}

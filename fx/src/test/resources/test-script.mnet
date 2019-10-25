@@ -1,0 +1,45 @@
+autoReleaseRT = true
+val swta = new SoftWTA(n = 3)
+swta.inhib.ui.color = Color.HOTPINK
+swta.layout()
+val lay = Layer(n = 8)
+val testTie = Param("test", 5.0, 0.1)
+var count = 0
+// SAM testing
+system.sparse.onSpike = t => {
+  count += 1
+}
+system.onReset = {
+  count += 1
+}
+val gamePad = AnglePad()
+val env = new Newton2D()
+     
+val size = 8
+val tau = 2
+val grid = YGrid(rows = size, cols = size, tau = tau) // CFL < 0.5 ok
+grid.ui.loc = Loc().up(50)
+val cMid, rMid = grid.rows/2
+val len = size/4
+for(r <- 0 until len) {
+  val y = grid(rMid+r-len/2, cMid)
+  y.name = " "
+  y.ui.viz = Viz.Default
+  y.ui.loc = Loc(40+r*30, 680)
+  y.ui.color = Color.hsb((r*2) % 360,0.8,1.0,1.0)
+}
+val pal = OpacityMapFX(4.0f, numColors = 256)
+     
+skins += new BatterySkinFX {
+  override def createGrid(g: GridData): Option[UI] = {
+    val sc3d = new Scene3DFX(loc = g.ui.loc, w = 500, h = 500, zoom = 1.5)
+    sc3d.sun.translateY = 1000.0
+    sc3d.sun.color = Color.web("#777")
+    sc3d.ambientLight.color = Color.web("#eee")
+    sc3d += new Box3DFX(grid = g.subGridData(64, 64), colorMap = pal, rad = 6.0)
+    create3d(sc3d)
+  }
+}
+Trial(name = "equal inputs")
+Step(y=swta(0), on=400, dur=2000, scale=5.0)
+Step(y=swta(1), on=400, dur=2000, scale=5.0)

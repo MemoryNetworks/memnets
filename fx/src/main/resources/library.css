@@ -1,0 +1,98 @@
+#libraryPane {
+  -fx-dark: #111;
+  -fx-base: #333;
+  -fx-background-color: linear-gradient(#444 0%, -fx-dark 35%, -fx-dark 100%);
+  -fx-font-family: "Verdana";
+}
+.text {
+  -fx-font-smoothing-type: lcd;
+  -fx-text-alignment: center;
+}
+.choose-header {
+  -fx-fill: #bbb;
+  -fx-font-weight: bold;
+  -fx-text-alignment: center;
+  -fx-font-smoothing-type: lcd;
+  -fx-font-size: 24px;
+  -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.8), 0.5, 0.0, 0.0, 1.5);
+}
+.choose-header2 {
+  -fx-fill: #bbb;
+  -fx-font-weight: bold;
+  -fx-text-alignment: center;
+  -fx-font-smoothing-type: lcd;
+  -fx-font-size: 18px;
+  -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.8), 0.5, 0.0, 0.0, 1.5);
+}
+.choose-author {
+  // memnet-color
+  -fx-fill: #8C5FD2;
+  -fx-font-weight: normal;
+  -fx-font-style: italic;
+  -fx-text-alignment: center;
+  -fx-font-smoothing-type: lcd;
+  -fx-font-size: 15 px;
+}
+.button {
+   -fx-focus-color: #8C5FD2;
+   -fx-font-weight: bold;
+   -fx-text-fill: #888;
+}
+.toggle-button {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #888;
+   // memnet-color
+   -fx-focus-color: #8C5FD2;
+   -fx-shadow-highlight-color: #222;
+}
+.toggle-button:selected {
+   -fx-text-fill: #ccc;
+}
+.toggle-button:selected .text {
+   -fx-effect: dropshadow(three-pass-box , rgba(255,255,255,0.2), 7, 0.5 , 0 , 0);
+}
+.toggle-button:focused {
+}
+.list-view {
+    -fx-border-width: 1;
+    -fx-border-color: #333;
+    -fx-background-color: transparent;
+    -fx-text-font-smoothing-type: lcd;
+    -fx-font-weight: bold;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+  // memnet-color
+    -fx-text-fill: #8C5FD2;
+}
+.list-cell {
+  -fx-text-fill: #eee;
+ // -fx-background-insets: 1;
+  -fx-border-width: 1 0;
+  -fx-border-color: #333 transparent;
+
+}
+.list-cell:odd { -fx-background-color: derive(-fx-dark,+10%);  }
+.list-cell:even { -fx-background-color: derive(-fx-dark,+10%); }
+.list-cell:filled:hover {
+    -fx-background-color: derive(-fx-dark,+40%);
+    -fx-text-fill: black;
+}
+
+.dialog-pane {
+   -fx-background-color: #111;
+}
+.dialog-pane .label {
+    -fx-text-fill: #ddd;
+}
+.dialog-pane:header .header-panel {
+    -fx-background-color: #111;
+}
+.dialog-pane:header .header-panel .label {
+    -fx-font-style: italic;
+    -fx-font-size: 2em;
+}
+.dialog-pane > .button-bar {
+//    -fx-font-weight: bold;
+}

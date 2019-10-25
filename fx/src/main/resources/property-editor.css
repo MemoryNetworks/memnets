@@ -1,0 +1,28 @@
+.property-editor {
+  -fx-base: #111;
+  -fx-background-color: -fx-base;
+  -fx-fill-kj: rgba(255,255,255,0.8);
+  -fx-stroke-kj: rgba(0,0,0,0.6);
+  -fx-text-fill-kj: rgba(255,255,255,0.8);
+  -slider-light: rgba(255,255,255,0.7);
+  -slider-dark: rgba(0,0,0,0.3);
+}
+.property-pane {
+}
+.property-sheet {
+  -fx-color: -fx-base;
+  -fx-background: transparent;
+}
+
+.text {
+//  -fx-font: 15 Tahoma;
+  -fx-font: bold 14 Tahoma;
+}
+.text-field {
+  -fx-font: 15 Tahoma;
+}
+.tooltip {
+  -fx-opacity: 0.8;
+  -fx-background-color: linear-gradient(#444, #222);
+  -fx-font: bold 14 Tahoma;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<AnchorPane fx:id="gameMain" maxHeight="-Infinity" maxWidth="-Infinity" stylesheets="@gamebuttons.css"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox fx:id="gameVbox" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ToggleButton fx:id="button1" cache="true" contentDisplay="TEXT_ONLY" focusTraversable="false"
+                              minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="A"
+                              textAlignment="CENTER">
+                    <styleClass>
+                        <String fx:value="game-button"/>
+                        <String fx:value="game-control"/>
+                    </styleClass>
+                </ToggleButton>
+                <ToggleButton fx:id="button2" cache="true" focusTraversable="false" minWidth="-Infinity"
+                              mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" styleClass="game-button"
+                              text="B"/>
+                <ToggleButton fx:id="button3" cache="true" contentDisplay="TEXT_ONLY" focusTraversable="false"
+                              minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0"
+                              styleClass="game-button" text="C"/>
+            </children>
+        </VBox>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+</AnchorPane>

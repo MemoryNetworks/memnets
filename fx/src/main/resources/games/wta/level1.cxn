@@ -1,0 +1,37 @@
+// format: src_r, src_c, cxn_type, tgt_r, tgt_c, w
+// cxn_type:
+// -1 for unit to unit
+// -2 for mem to wall
+// -3 for unit to wall
+// NOTE : all weights divided by 10.0
+
+// black hole primary (opens after ctl2)
+1,24,-1,10,13,7
+// black hole default
+1,24,-1,24,1,4
+
+// top left (patternB)
+// combo1 outside guy opens box
+3,1,-2,2,4,-100
+// combo1 inside box guy reveal last hidden combo
+4,3,-2,4,5,-100
+
+// top right (patternA)
+// corner of box blocks blocker
+7,19,-3,10,16,-1000
+// unknown pushes corner down to block belt
+7,11,-2,7,19,-100
+// combo3 opens 2nd chamber
+8,14,-2,8,15,-100
+// combo3 middle guy opens last chamber
+9,17,-2,11,20,-100
+
+// bottom (patternC)
+// far wall holds conveyor blocker down
+22,11,-3,21,9,-1000
+// unknown guy pushes far wall down
+22,6,-2,22,11,-100
+// combo guy in middle reveals hidden combo
+22,8,-2,23,10,-100
+// same combo guy in middle opens encircled last combo
+22,8,-2,23,21,-100

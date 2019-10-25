@@ -1,0 +1,29 @@
+.game-button {
+    -fx-border-color: #ffffff33;
+    -fx-border-width: 5.0;
+    -fx-border-radius: 50;
+    -fx-border-insets: 0;
+    -fx-background-color: null;
+   // -fx-background-color: black;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 4 16 4 16;   // top right bot left
+    -fx-font-family: "Tahoma";
+    -fx-font-size: 36px;
+}
+.game-button .text {
+    -fx-fill: #ffffffaa;
+    -fx-stroke: rgba(0,0,0,0.5);
+}
+
+.game-button:disabled, .game-button:disabled > * {
+// not working...  -fx-border-color: red;
+  -fx-opacity: 0.4;
+}
+.game-button:selected .text {
+   -fx-fill: #fff;
+}
+.game-button:selected {
+    -fx-border-color: #ffffffff;
+}
+

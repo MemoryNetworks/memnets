@@ -1,0 +1,74 @@
+
+.root {
+  -fx-font-family: "Tahoma";
+  -fx-base: #222;
+  -fx-focus-color: rgba(0,0,255,0.15);
+  -fx-background: derive(-fx-base,-10%);
+  -fx-control-inner-background: derive(-fx-base,+20%);
+}
+.context-menu {
+  -fx-background-color: rgba(0,0,0,0.5)
+}
+.context-menu .separator {
+   -fx-padding: 0.0em 0.6em 0.0em 0.6em; // 0 4 0 4
+   -fx-base: rgba(255,255,255,0.5);
+}
+.text {
+  -fx-fill: derive(-fx-base,+90%);
+  -fx-font-smoothing-type: lcd;
+}
+#matrixScroll {
+  // need both here...
+  -fx-background: transparent;
+  -fx-background-color: transparent;
+}
+#fpsText {
+  -fx-fill: rgba(255,255,255,0.2);
+}
+#system {
+ // do not include image here or when style overrides, have to explicity set to null
+ // -fx-background-image: url("backgrounds/tiles-backgroundv0.jpg");
+ // default background seen at startup
+  -fx-background-color: rgba(10,10,10,1.0);
+  -fx-background-size: stretch;
+}
+#headerPane {
+ -fx-border-width: 0 1 0 1;
+ -fx-border-color: rgba(255,255,255,0.2);
+}
+
+// time chart section
+#timePane {
+// NOTE : this will be replaced in SkinFX
+  -fx-background-color: rgba(0,0,0,0.35);
+}
+#timeChart {
+ -fx-horizontal-grid-lines-visible: true;
+ -fx-vertical-grid-lines-visible: false;
+}
+#timeChart .chart-plot-background {
+  -fx-background-color: null;
+}
+#timeChart .chart-horizontal-grid-lines {
+  -fx-stroke: rgba(255,255,255,0.3);
+  -fx-stroke-width: 1.0;
+  -fx-stroke-dash-array: null;
+}
+#timeChart .chart-horizontal-zero-line{
+  -fx-stroke: rgba(255,255,255,0.6);
+  -fx-stroke-width: 1.0;
+  -fx-stroke-dash-array: null;
+}
+#timeChart .axis {
+  AXIS_COLOR: rgba(255,255,255,0.5);
+  -fx-tick-mark-visible: true;
+  -fx-minor-tick-visible: false;
+  -fx-tick-length: 3;
+  -fx-minor-tick-length: 0;
+  -fx-tick-label-font: normal bold 10 Tahoma;
+  -fx-tick-label-fill: rgba(255,255,255,0.7);
+}
+#timeChart .plot-content {
+ // -fx-opacity: 0.8;
+//  -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.7),2, 0.0,6,6);
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<AnchorPane fx:id="sceneEditPane" maxWidth="-Infinity" prefWidth="310.0" styleClass="property-editor"
+            stylesheets="@property-editor.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane fx:id="lightPane" prefHeight="245.0" prefWidth="320.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <padding>
+                <Insets top="16.0"/>
+            </padding>
+        </AnchorPane>
+        <Label alignment="CENTER" prefHeight="30.0" text="Picked Phong" AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="245.0"/>
+        <AnchorPane fx:id="phongPane" prefWidth="310.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="275.0"/>
+    </children>
+    <padding>
+        <Insets top="1.0"/>
+    </padding>
+</AnchorPane>

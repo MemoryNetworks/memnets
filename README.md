@@ -1,10 +1,10 @@
-# MemNets
-
+# The MemNets Framework
 
 MemNets is a framework for numerical simulations and games written in Scala, with Kotlin and Java friendly bindings. 
 
 The latest release is 1.0.0, which is cross-built against 2.12, and 2.13
-(not published to Maven Central yet.  coming soon)
+
+*not published to Maven Central yet.  coming soon*
 
 ## Example 
 
@@ -56,7 +56,7 @@ libraryDependencies  ++= Seq(
   "com.memnets" %% "fx" % "1.0.0"
 )
 ```
-(other jars are not published)
+(other jars are not published.  can use `sbt publishLocal`)
 
 ### Maven
 
@@ -76,19 +76,19 @@ libraryDependencies  ++= Seq(
 ### Project structure
 
 - api 
-core library is UI agnostic
+   - core library is UI agnostic
 - models 
-numerous pre-built scientific models using only api in StandardLibrary.scala
-if you would like to share a model, contribute it to CommunityLibrary.scala
+   - numerous pre-built scientific models using only api in StandardLibrary.scala
+   - if you would like to share a model, contribute it to CommunityLibrary.scala
 - awt 
-example app in Swing/AWT.
-parts used by other two UI projects
+   - example app in Swing/AWT.
+   - parts used by other two UI projects
 - fx 
-primary app development
-can be built using JavaFX 8, 11, or 12
+   - primary app development
+   - can be built using JavaFX 8, 11, or 12
 - lwjgl 
-example app in SWT+OpenGL
-jars not published
+   - example app in SWT+OpenGL
+   - jars not published
 
 NOTE: most of the examples use the StandardLibrary, e.g., running LorentFX, JLorentz, or LorentzGL will all allow you to select other models
 
@@ -98,16 +98,30 @@ NOTE: most of the examples use the StandardLibrary, e.g., running LorentFX, JLor
 
 ## Building/running yourself
 
-- Install SBT 1.2.8+ (only version tested) 
 - Clone this repository
 - See Build.sbt for required environment variables and javafx options
-- At root directory
+
+#### Use SBT
+
+- Install SBT 1.2.8+ (only version tested)
+- At install directory
+ NOTE: sbt may require more than the default memory for compile+tests
 
 
-```sbt
-// NOTE: sbt may require more than the default memory here
+```sbtshell
 sbt test // will download jars, compile, and run tests
 sbt "project fx" "run"
 ```
+
+#### Use IntelliJ
+
+(with Scala plugin installed/enabled)
+1. New Project from Existing Sources
+2. Point to install directory
+3. Select Build.sbt
+4. Wait 5-10 seconds for IDE to process build
+5. Build fully imported project
+6. Navigate to fx/src/main/scala/memnets.fx.demo/DemosFX.scala and right-click to run 
+
 
 (c) Memory Networks, 2019

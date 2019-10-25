@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import java.lang.String?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@texture.css"
+      xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <StackPane fx:id="stack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+            <children>
+                <AnchorPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                            minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" StackPane.alignment="CENTER">
+                    <StackPane.margin>
+                        <Insets/>
+                    </StackPane.margin>
+                </AnchorPane>
+                <Rectangle fx:id="glass" arcHeight="4.0" arcWidth="4.0" cache="true" cacheHint="SPEED" fill="#54505000"
+                           height="600.0" mouseTransparent="true" strokeWidth="0.0" width="600.0"
+                           StackPane.alignment="CENTER">
+                    <styleClass>
+                        <String fx:value="metal"/>
+                        <String fx:value="glass"/>
+                    </styleClass>
+                </Rectangle>
+            </children>
+        </StackPane>
+        <Rectangle fx:id="base" arcHeight="3.0" arcWidth="3.0" cache="true" cacheHint="QUALITY" fill="DODGERBLUE"
+                   height="8.0" stroke="#00000080" strokeType="INSIDE" strokeWidth="0.5" styleClass="metal-fill"
+                   width="600.0">
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+            <effect>
+                <Reflection fraction="0.9" topOffset="-10.0">
+                    <input>
+                        <DropShadow blurType="GAUSSIAN" color="#00000080" height="11.0" offsetY="5.0" radius="5.25"
+                                    width="12.0"/>
+                    </input>
+                </Reflection>
+            </effect>
+        </Rectangle>
+    </children>
+</VBox>

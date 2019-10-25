@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<StackPane id="modelPane" fx:id="modelPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+           minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8"
+           xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane id="timePane" fx:id="timePane" maxHeight="-Infinity" minHeight="0.0" minWidth="0.0"
+                    prefHeight="150.0" StackPane.alignment="TOP_CENTER">
+            <children>
+                <StackPane fx:id="scorePane" cache="true" prefWidth="100.0" AnchorPane.bottomAnchor="0.0"
+                           AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Text fx:id="scoreLabel" cache="true" fill="WHITE" fontSmoothingType="LCD" opacity="0.3"
+                              stroke="#00000080" strokeType="OUTSIDE" strokeWidth="0.5" text="SCORE"
+                              StackPane.alignment="TOP_CENTER">
+                            <font>
+                                <Font name="Verdana Bold" size="20.0"/>
+                            </font>
+                        </Text>
+                        <Text fx:id="scoreText" cache="true" fill="WHITE" fontSmoothingType="LCD" opacity="0.4"
+                              stroke="#00000080" text="05" StackPane.alignment="CENTER">
+                            <font>
+                                <Font name="Verdana" size="46.0"/>
+                            </font>
+                            <StackPane.margin>
+                                <Insets bottom="50.0"/>
+                            </StackPane.margin>
+                        </Text>
+                        <Line endX="80.0" fill="#9a9a9a" opacity="0.6" stroke="#fafafa" strokeLineCap="ROUND"
+                              strokeWidth="4.0" StackPane.alignment="CENTER">
+                            <effect>
+                                <InnerShadow choke="0.5" color="#00000080" height="2.0" offsetY="1.0" radius="0.5"
+                                             width="2.0"/>
+                            </effect>
+                            <StackPane.margin>
+                                <Insets top="1.0"/>
+                            </StackPane.margin>
+                        </Line>
+                        <Text fx:id="scoreWinText" cache="true" fill="WHITE" fontSmoothingType="LCD" opacity="0.4"
+                              stroke="#00000080" text="05" StackPane.alignment="CENTER">
+                            <font>
+                                <Font name="Verdana" size="46.0"/>
+                            </font>
+                            <StackPane.margin>
+                                <Insets top="50.0"/>
+                            </StackPane.margin>
+                        </Text>
+                    </children>
+                </StackPane>
+                <HBox alignment="CENTER" fillHeight="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="160.0"
+                      AnchorPane.rightAnchor="160.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <AnchorPane fx:id="headerPane" maxWidth="1400.0" minHeight="40.0" minWidth="100.0"
+                                    prefWidth="960.0" HBox.hgrow="SOMETIMES">
+                            <children>
+                                <ScrollPane fx:id="matrixScroll" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER"
+                                            pannable="true" prefViewportHeight="100.0" prefViewportWidth="300.0"
+                                            vbarPolicy="NEVER" visible="false" AnchorPane.bottomAnchor="0.0"
+                                            AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="0.0"
+                                            AnchorPane.topAnchor="0.0">
+                                    <content>
+                                        <TextFlow fx:id="matrixFlow" cache="true" stylesheets="@equation.css">
+                                            <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0"
+                                                      text="x' = 2x + y - 120 + 20">
+                                                    <styleClass>
+                                                        <String fx:value="matrix-row"/>
+                                                        <String fx:value="matrix-row-head"/>
+                                                    </styleClass>
+                                                </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="matrix-row"
+                                                      text="y' = y + 30"/>
+                                            </children>
+                                            <padding>
+                                                <Insets top="5.0"/>
+                                            </padding>
+                                        </TextFlow>
+                                    </content>
+                                </ScrollPane>
+                                <LineChart fx:id="timeChart" alternativeRowFillVisible="false" animated="false"
+                                           createSymbols="false" horizontalGridLinesVisible="false" legendSide="TOP"
+                                           legendVisible="false" verticalGridLinesVisible="false"
+                                           verticalZeroLineVisible="false" AnchorPane.bottomAnchor="2.0"
+                                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                           AnchorPane.topAnchor="8.0" StackPane.alignment="CENTER">
+                                    <xAxis>
+                                        <NumberAxis animated="false" autoRanging="false" forceZeroInRange="false"
+                                                    prefHeight="3.0" side="BOTTOM"/>
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis animated="false" forceZeroInRange="false" minorTickCount="0"
+                                                    side="RIGHT" tickLabelGap="2.0"/>
+                                    </yAxis>
+                                </LineChart>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+                <StackPane fx:id="clockPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0"
+                           prefHeight="132.0" prefWidth="132.0" AnchorPane.bottomAnchor="0.0"
+                           AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                    minWidth="-Infinity" prefHeight="132.0" prefWidth="132.0"
+                                    StackPane.alignment="CENTER">
+                            <children>
+                                <Arc fx:id="timerArc" centerX="65.0" centerY="65.0" fill="TRANSPARENT" length="330.0"
+                                     radiusX="56.0" radiusY="56.0" startAngle="90.0" stroke="#00ffba" strokeWidth="10.0"
+                                     AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="5.0"/>
+                                <Arc fx:id="timerGlass" cache="true" centerX="65.0" centerY="65.0" fill="TRANSPARENT"
+                                     length="360.0" radiusX="56.0" radiusY="56.0" startAngle="45.0" stroke="#ffffff1a"
+                                     strokeWidth="10.0" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="5.0"/>
+                            </children>
+                            <StackPane.margin>
+                                <Insets/>
+                            </StackPane.margin>
+                        </AnchorPane>
+                        <Text fx:id="timerText" fill="#ffffffcc" fontSmoothingType="LCD" stroke="#08080880" text="0"
+                              StackPane.alignment="CENTER">
+                            <font>
+                                <Font name="Tahoma" size="34.0"/>
+                            </font>
+                        </Text>
+                    </children>
+                </StackPane>
+                <StackPane fx:id="cachedPane" cache="true" mouseTransparent="true" AnchorPane.bottomAnchor="0.0"
+                           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Text fx:id="nameText" fill="WHITE" fontSmoothingType="LCD" stroke="#00000080" strokeWidth="0.5"
+                              text="MEMNETS" StackPane.alignment="CENTER">
+                            <font>
+                                <Font name="Tahoma Bold" size="72.0"/>
+                            </font>
+                            <effect>
+                                <DropShadow color="WHITE" spread="0.2"/>
+                            </effect>
+                            <StackPane.margin>
+                                <Insets top="-12.0"/>
+                            </StackPane.margin>
+                        </Text>
+                        <AnchorPane fx:id="glassPane" cache="true" mouseTransparent="true" StackPane.alignment="CENTER">
+                            <children>
+                                <Pane fx:id="glass" styleClass="glass-pane" AnchorPane.bottomAnchor="0.0"
+                                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                      AnchorPane.topAnchor="0.0"/>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                    <effect>
+                        <Reflection fraction="0.5" topOffset="-5.0" topOpacity="0.4"/>
+                    </effect>
+                </StackPane>
+            </children>
+        </AnchorPane>
+        <StackPane fx:id="menuPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                   minWidth="-Infinity" prefHeight="150.0" prefWidth="52.0" stylesheets="@menubtn.css"
+                   StackPane.alignment="TOP_LEFT">
+            <children>
+                <Text id="fpsText" fx:id="fpsText" fontSmoothingType="LCD" mouseTransparent="true" strokeType="OUTSIDE"
+                      strokeWidth="0.0" text="FPS: 60" StackPane.alignment="TOP_CENTER">
+                    <font>
+                        <Font name="Tahoma" size="11.0"/>
+                    </font>
+                </Text>
+                <ToggleButton fx:id="menuBtn" alignment="CENTER" cache="true" contentDisplay="GRAPHIC_ONLY"
+                              graphicTextGap="0.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0"
+                              styleClass="menu-btn" text="Menu" textAlignment="CENTER" StackPane.alignment="CENTER">
+                    <effect>
+                        <InnerShadow color="#00000080" height="10.0" offsetX="2.0" offsetY="3.0" radius="4.5"
+                                     width="10.0"/>
+                    </effect>
+                    <StackPane.margin>
+                        <Insets top="2.0"/>
+                    </StackPane.margin>
+                </ToggleButton>
+            </children>
+        </StackPane>
+    </children>
+    <stylesheets>
+        <URL value="@model.css"/>
+        <URL value="@texture.css"/>
+        <URL value="@textarea-dark.css"/>
+    </stylesheets>
+</StackPane>

@@ -1,0 +1,19 @@
+.text-area-dark *.text {
+    -fx-text-alignment: left;
+}
+.text-area-dark {
+    -fx-background-color: #1c1c1c;
+    -fx-text-fill: derive(-fx-base,+90%);
+    -fx-text-font-smoothing-type: lcd;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: bold;
+}
+.text-area-dark .scroll-pane {
+  -fx-background-color: transparent;
+}
+.text-area-dark .scroll-pane .viewport {
+  -fx-background-color: transparent;
+}
+.text-area-dark .scroll-pane .content {
+  -fx-background-color: transparent;
+}

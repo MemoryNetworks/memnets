@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<Group fx:id="gamePadGroup" autoSizeChildren="false" pickOnBounds="true" stylesheets="@gamecontrol.css"
+       xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <StackPane fx:id="gamePadBack" cache="true">
+            <children>
+                <Rectangle fx:id="gamePadBack0" arcHeight="80.0" arcWidth="80.0" fill="TRANSPARENT" height="199.0"
+                           pickOnBounds="true" stroke="#1212124d" strokeType="INSIDE" strokeWidth="0.8" width="199.0"/>
+                <Rectangle fx:id="gamePadBack1" arcHeight="80.0" arcWidth="80.0" fill="#ffffff0d" height="200.0"
+                           pickOnBounds="true" stroke="#d76464" strokeType="INSIDE" styleClass="game-stroke"
+                           width="200.0">
+                    <effect>
+                        <DropShadow color="#ffffffe5" height="20.0" radius="9.5" spread="0.5" width="20.0"/>
+                    </effect>
+                </Rectangle>
+            </children>
+        </StackPane>
+        <Arc fx:id="gamePadArc" centerX="100.0" centerY="-100.0" fill="#ffffff1a" radiusX="200.0" radiusY="200.0"
+             startAngle="180.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" type="ROUND"/>
+        <Text fx:id="gamePadText" fill="#ffffff80" layoutX="-50.0" layoutY="-60.0" stroke="#00000080" strokeWidth="0.4">
+            <font>
+                <Font size="36.0"/>
+            </font>
+        </Text>
+        <StackPane fx:id="gamePad" cache="true">
+            <children>
+                <Circle fx:id="gamePad1" fill="TRANSPARENT" pickOnBounds="true" radius="39.0" stroke="#0000004d"
+                        strokeType="INSIDE" strokeWidth="0.8" styleClass="game-control">
+                    <effect>
+                        <DropShadow color="#ffffffcc" height="20.0" radius="9.5" spread="0.7" width="20.0"/>
+                    </effect>
+                </Circle>
+                <Circle fx:id="gamePad0" fill="#ffffff00" pickOnBounds="true" radius="40.0" stroke="#ffffffcc"
+                        strokeType="INSIDE" styleClass="game-control">
+                    <effect>
+                        <DropShadow color="#ffffffcc" height="20.0" radius="9.5" spread="0.7" width="20.0"/>
+                    </effect>
+                </Circle>
+            </children>
+        </StackPane>
+    </children>
+</Group>

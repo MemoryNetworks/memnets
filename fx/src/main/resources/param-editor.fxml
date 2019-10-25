@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<AnchorPane fx:id="tiePane" cache="true" maxWidth="-Infinity" prefWidth="310.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Slider fx:id="tieSlider" majorTickUnit="0.5" max="1.0" minorTickCount="4" showTickLabels="true"
+                showTickMarks="true" styleClass="gameslider" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0"
+                AnchorPane.topAnchor="28.0">
+            <padding>
+                <Insets bottom="10.0" left="6.0" right="6.0" top="10.0"/>
+            </padding>
+        </Slider>
+        <Label fx:id="precisionLbl" text="Precision" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="7.0">
+            <font>
+                <Font name="Tahoma" size="10.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="tiePrecTxt" alignment="CENTER" cache="true" prefWidth="80.0" promptText="0.01"
+                   AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="5.0"/>
+        <TableView fx:id="tieTable" editable="true" maxWidth="310.0" prefHeight="220.0" tableMenuButtonVisible="true"
+                   AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                   AnchorPane.topAnchor="100.0">
+            <columns>
+                <TableColumn fx:id="nameCol" maxWidth="5000.0" minWidth="10.0" prefWidth="118.0" text="Name"/>
+                <TableColumn fx:id="valCol" maxWidth="5000.0" minWidth="0.0" prefWidth="65.0" text="Val"/>
+                <TableColumn fx:id="maxCol" maxWidth="5000.0" minWidth="10.0" prefWidth="38.0" text="Max"/>
+                <TableColumn fx:id="idCol" maxWidth="5000.0" minWidth="0.0" prefWidth="64.0" text="Id"/>
+            </columns>
+        </TableView>
+    </children>
+    <stylesheets>
+        <URL value="@sidebar.css"/>
+        <URL value="@param-editor.css"/>
+    </stylesheets>
+    <padding>
+        <Insets top="1.0"/>
+    </padding>
+</AnchorPane>

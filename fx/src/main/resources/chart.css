@@ -1,0 +1,52 @@
+#chart .text {
+  -fx-fill: #222;
+  -fx-font-smoothing-type: lcd;
+  -fx-font: normal 16 Tahoma;
+}
+/*
+#chart {
+ -fx-border-width: 1.0;
+  -fx-border-color: black;
+}
+*/
+#stack {
+ -fx-border-width: 1.5;
+  -fx-border-color: black;
+}
+.chart-legend {
+  // -fx-border-width: 1.0;
+  // -fx-border-color: black;
+   -fx-background-color:  transparent;
+  // -fx-padding: 5px;
+}
+.chart-legend-item-symbol{
+  // -fx-background-radius: 0;
+ // -fx-padding: 0px;
+}
+.chart-plot-background {
+  -fx-background-color: null;
+}
+.chart-horizontal-grid-lines {
+//  -fx-stroke: rgba(0,0,0,0.5);
+//  -fx-stroke-width: 1.0;
+ // -fx-stroke-dash-array: null;
+}
+.chart-horizontal-zero-line{
+//  -fx-stroke: rgba(255,255,255,0.35);
+ // -fx-stroke-width: 1;
+ // -fx-stroke-dash-array: null;
+}
+.axis {
+    -fx-stroke: 2.0;
+    -fx-tick-mark-visible: true;
+    -fx-minor-tick-visible: true;
+    -fx-minor-tick-count: 2;
+    -fx-tick-length: 10;
+    -fx-minor-tick-length: 4;
+    -fx-tick-label-font: normal 13 Tahoma;
+    -fx-tick-label-fill: #444;
+}
+.plot-content {
+ // -fx-opacity: 0.8;
+//  -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.7),2, 0.0,6,6);
+}

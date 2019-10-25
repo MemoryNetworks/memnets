@@ -1,0 +1,30 @@
+val swta = SoftWTALayer(n = 2000)
+val ff = Param("ff", max = 1.2, init = 0.8)
+swta.excites.chain(ff)
+
+val probe = swta.length/4
+
+val poolA = Y("PoolA", decay = -1.0, act = Relu)
+val dottA = swta.excites --> poolA
+dottA.srcRange.modify(probe+4, probe+8)
+
+val poolB = Y("PoolB", decay = -1.0, act = Relu)
+val dottB = swta.excites --> poolB
+dottB.srcRange.modify(probe+12, probe+16)
+
+poolA.ui.loc = Loc().up(140).left(200)
+poolB.ui.loc = poolA.ui.loc.right(60)
+
+system.spase.onTick = { te =>
+  if (te.t % 10 == 0) {
+    swta.excites.topK(k = 3, min = 0.0)
+  }
+}
+swta.inhib.ui.color = Colorf.INHIB
+skin = Skin(_.backImage = SkinImage.FOUR)
+
+system.elements += new Sliding(swta.excites) {
+  loc = Loc().down(180)
+  imageHints = ImageHints(width = 2000, height = 256, scaleX = 0.5, reflection = false)
+}
+Step(y = swta(probe), on = 20, dur = 40, scale = 2.0)

@@ -1,0 +1,30 @@
+<configuration debug="true">
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are  by default assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
+        <encoder>
+            <pattern>%d{MM-dd hh:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <!--  <pattern>%-5level %logger{36} - %msg%n</pattern> -->
+        </encoder>
+    </appender>
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        // NOTE: use LOG_DIR if found, else use working directory "."
+        <file>${LOG_DIR:-.}/memnets.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{MM-dd hh:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${LOG_DIR:-.}/memnets_%d{yyyy-MM-dd}_%i.log</fileNamePattern>
+            <!-- keep 30 days' worth of history capped at 100MB total size -->
+            <maxHistory>30</maxHistory>
+            <maxFileSize>5MB</maxFileSize>
+            <totalSizeCap>100MB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+    <root level="debug">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>

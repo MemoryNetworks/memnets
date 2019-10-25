@@ -1,0 +1,168 @@
+#tiePane {
+  -slider-light: rgba(255,255,255,0.7);
+  -slider-dark: rgba(0,0,0,0.3);
+  -fx-background-color: null;
+  -fx-fill-kj: rgba(255,255,255,0.8);
+  -fx-stroke-kj: rgba(0,0,0,0.6);
+  -fx-text-fill-kj: rgba(255,255,255,0.8);
+}
+#precisionLbl  .text {
+  -fx-font: bold 13 Tahoma;
+  -fx-fill: rgba(255,255,255,0.8);
+}
+.text {
+  -fx-font: bold 15 Tahoma;
+  -fx-fill: rgba(255,255,255,0.8);
+  -fx-stroke: rgba(0,0,0,0.5);
+  -fx-stroke-width: 0.5;
+  -fx-font-smoothing-type: lcd;
+  -fx-text-alignment: center;
+}
+.text-area {
+  -fx-text-fill: -fx-text-fill-kj;
+  -fx-font: 15 Tahoma;
+  -fx-font-smoothing-type: lcd;
+}
+.text-area * {
+  -fx-background-color: null;
+}
+.text-field {
+  -fx-border-color: -slider-light, -slider-dark;
+  -fx-border-width: 1.0, 0.5;
+  -fx-border-radius: 5 5;
+  -fx-background-color: null;
+  -fx-text-fill: -fx-text-fill-kj;
+//  -fx-font: bold 13 Tahoma;
+  -fx-font: 14 Tahoma;
+  -fx-padding: 0px;
+  -fx-border-insets: 0px;
+  -fx-background-insets: 0px;
+}
+.gameslider {
+  -fx-border-radius: 4;
+  -fx-border-color: rgba(255,255,255,0.2);
+  -fx-background-color: null;
+  -fx-base : rgba(255,255,255,0.6);
+}
+.gameslider *.axis {
+  -fx-tick-label-font: bold 11 Tahoma;
+  -fx-tick-label-fill: -fx-base;
+  -fx-tick-labels-visible: true;
+  -fx-tick-mark-visible: true;
+  -fx-minor-tick-visible: true;
+  -fx-tick-length: 10.0;
+  -fx-minor-tick-length: 8.0;
+  -fx-translate-x: 0;
+  -fx-translate-y: 4;
+}
+.gameslider *.axis Text {
+  -fx-font: bold 13 Tahoma;
+  -fx-fill: -fx-text-fill-kj;
+  -fx-stroke: -fx-stroke-kj;
+  -fx-stroke-width: 0.5;
+  -fx-font-smoothing-type: lcd;
+  -fx-text-alignment: center;
+}
+.gameslider .axis-tick-mark {
+  -fx-stroke: rgba(255,255,255,0.8); // needed in app but not scenebuilder???
+  -fx-stroke-width : 3.0;
+  -fx-stroke-line-cap : round;
+}
+.gameslider .axis-minor-tick-mark {
+  -fx-stroke: rgba(255,255,255,0.8);
+  -fx-stroke-width : 1.4;
+  -fx-stroke-line-cap : round;
+}
+.gameslider *.track {
+  -fx-border-color: rgba(0,0,0,0.3);
+  -fx-border-width: 0.2;
+  -fx-border-radius: 10;
+  -fx-background-color: rgba(255,255,255,0.12);
+}
+.gameslider *.thumb {
+  -fx-border-color: -slider-light, -slider-dark;
+  -fx-border-width: 2.0, 0.5;
+  -fx-border-radius: 10 10;
+  -fx-background-color: rgba(255,255,255,0.5);
+  -fx-scale-x : 1.5;
+  -fx-scale-y : 1.5;
+}
+.table-view {
+  -fx-accent: rgba(255,255,255,0.2);
+//  -fx-background-color: -fx-base;
+  -fx-background-color: null;
+  -fx-table-cell-border-color: rgba(255,255,255,0.6);
+  -fx-padding: 1;
+}
+.table-view > .virtual-flow {
+  -fx-border-color: #444;
+  -fx-border-width: 1.0;
+
+}
+.table-row-cell * .text  {
+  -fx-font: 15 Tahoma;
+  -fx-stroke: null;
+  -fx-stroke-width: 0.0;
+}
+.table-row-cell:odd {
+  -fx-background-color: null;
+}
+.table-row-cell:even {
+  -fx-background-color: null;
+}
+.table-row-cell:empty {
+  -fx-background-color: null;
+}
+.table-row-cell:empty .table-cell {
+  -fx-border-width: 0px;
+}
+.table-view .scroll-bar {
+  -fx-background-color: null;	
+}
+.increment-arrow {
+  -fx-background-color: white;	
+}
+.decrement-arrow {
+  -fx-background-color: white;	
+}
+.scroll-bar:horizontal {
+  //  -fx-opacity: 0;
+//    -fx-padding:-7;
+}
+/*
+.table-view .scroll-bar .thumb {
+  -fx-border-color: -slider-light, -slider-dark;
+  -fx-border-width: 2.0, 0.5;
+  -fx-border-radius: 8 ;
+  -fx-background-color: rgba(255,255,255,0.3);
+  -fx-background-color: null;	
+}
+*/
+.table-view *.column-header {
+  -fx-font-size: 14px;
+}
+.table-view *.column-header-background * {
+  -fx-background-color: null;
+}
+.table-view *.column-header .text {
+  -fx-font-size: 13px;
+}
+.table-cell {
+  -fx-alignment: CENTER;
+  -fx-border-width: 1 0;
+  -fx-border-color: #333 transparent;
+}
+
+// Selected row
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: rgba(255,255,255,0.25);
+    // not sure the rest does anything...
+  //  -fx-background-insets: 0, 1;
+   // -fx-background: -fx-accent;
+}
+// Selected row when table not focused
+.table-row-cell:filled:focused:selected {
+    -fx-background-color: rgba(255,255,255,0.25);
+  //  -fx-background-insets: 0, 1, 2;
+  //  -fx-background: rgba(255,255,255,0.2);
+}

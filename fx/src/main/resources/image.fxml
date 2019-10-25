@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import java.lang.String?>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false"
+           stylesheets="@texture.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fx:id="plot" fitHeight="512.0" fitWidth="512.0" pickOnBounds="true" smooth="false"
+                   StackPane.alignment="CENTER">
+            <StackPane.margin>
+                <Insets/>
+            </StackPane.margin>
+            <image>
+                <Image url="@plot-sample.jpg"/>
+            </image>
+        </ImageView>
+        <Rectangle fx:id="glass" arcHeight="20.0" arcWidth="10.0" cache="true" cacheHint="QUALITY" height="512.0"
+                   strokeType="OUTSIDE" strokeWidth="2.0" width="512.0" StackPane.alignment="CENTER">
+            <styleClass>
+                <String fx:value="glass"/>
+                <String fx:value="metal"/>
+            </styleClass>
+        </Rectangle>
+        <Rectangle fx:id="base" cache="true" cacheHint="QUALITY" height="3.0" stroke="BLACK" strokeType="INSIDE"
+                   strokeWidth="0.0" styleClass="metal-fill" width="512.0" StackPane.alignment="BOTTOM_CENTER">
+            <StackPane.margin>
+                <Insets/>
+            </StackPane.margin>
+            <effect>
+                <DropShadow color="#00000080" height="8.0" offsetY="2.0" radius="3.5" spread="0.2" width="8.0"/>
+            </effect>
+        </Rectangle>
+    </children>
+    <effect>
+        <Reflection fraction="0.15" topOffset="-8.0"/>
+    </effect>
+</StackPane>

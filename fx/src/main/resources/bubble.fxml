@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<Group cache="true" cacheHint="QUALITY" stylesheets="@bubble.css" xmlns="http://javafx.com/javafx/8"
+       xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Circle fx:id="main" radius="25.0" stroke="#f0eded80" strokeType="INSIDE" strokeWidth="0.0"
+                styleClass="bubble-main" visible="false"/>
+        <Circle fx:id="frame" radius="25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0"
+                styleClass="bubble-frame"/>
+        <Ellipse centerY="-13.0" radiusX="18.0" radiusY="11.5" strokeType="INSIDE" strokeWidth="0.0"
+                 styleClass="bubble-highlight"/>
+    </children>
+</Group>

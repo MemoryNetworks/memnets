@@ -1,0 +1,4 @@
+.gauge {
+ // -fx-background-color: linear-gradient(#111 50%, #eee 51%);
+  -fx-background-color: black;
+}

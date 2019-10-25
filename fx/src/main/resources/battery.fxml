@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<Group cacheHint="QUALITY" stylesheets="@battery.css" xmlns="http://javafx.com/javafx/8"
+       xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Rectangle fx:id="fill" fill="#fa07c2" height="72.0" stroke="TRANSPARENT" strokeType="INSIDE" width="36.0"
+                   y="9.0"/>
+        <Rectangle fx:id="frost" blendMode="MULTIPLY" fill="WHITE" height="72.0" stroke="BLACK" strokeType="INSIDE"
+                   strokeWidth="0.0" width="36.0" y="9.0">
+            <effect>
+                <InnerShadow choke="0.6" color="#00000080" height="27.5" radius="13.875" width="30.0"/>
+            </effect>
+        </Rectangle>
+        <Rectangle fx:id="cap" height="3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.05" styleClass="metal-top"
+                   width="12.0" x="12.0"/>
+        <Rectangle fx:id="top" height="6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.05" styleClass="metal"
+                   width="36.0" y="3.0"/>
+        <Rectangle fx:id="body" height="72.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.05" styleClass="glass"
+                   width="36.0" y="9.0"/>
+        <Rectangle fx:id="highlight" arcHeight="3.0" arcWidth="3.0" fill="#27b573" height="4.0" stroke="BLACK"
+                   strokeType="OUTSIDE" strokeWidth="0.0" width="16.0" x="10.0" y="4.0">
+            <effect>
+                <InnerShadow choke="0.5" color="#000000cc" height="6.0" offsetY="1.0" radius="2.5" width="6.0"/>
+            </effect>
+        </Rectangle>
+        <BorderPane layoutX="-17.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" pickOnBounds="false" prefHeight="26.0" prefWidth="68.0" rotate="-90.0"
+                    scaleY="1.1" styleClass="metal">
+            <center>
+                <Text fx:id="text" cacheHint="QUALITY" fill="#bfbfbfe5" stroke="#00000080" strokeWidth="0.5"
+                      text="Learn" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="Tahoma Bold" size="21.0"/>
+                    </font>
+                    <effect>
+                        <InnerShadow blurType="GAUSSIAN" choke="0.2" color="#000000cc" height="3.0" offsetY="1.0"
+                                     radius="1.0" width="3.0"/>
+                    </effect>
+                    <BorderPane.margin>
+                        <Insets/>
+                    </BorderPane.margin>
+                </Text>
+            </center>
+        </BorderPane>
+        <Rectangle fx:id="mark1" fill="#ffffff66" height="3.0" stroke="#00000080" strokeWidth="0.25" width="7.0"
+                   y="26.0">
+            <effect>
+                <InnerShadow height="1.0" offsetX="1.0" offsetY="1.0" radius="0.0" width="1.0"/>
+            </effect>
+        </Rectangle>
+        <Rectangle fx:id="mark2" fill="#ffffff66" height="3.0" stroke="#00000080" strokeWidth="0.25" width="7.0"
+                   y="44.0">
+            <effect>
+                <InnerShadow height="1.0" offsetX="1.0" offsetY="1.0" radius="0.0" width="1.0"/>
+            </effect>
+        </Rectangle>
+        <Rectangle fx:id="mark3" fill="#ffffff66" height="3.0" stroke="#00000080" strokeWidth="0.25" width="7.0"
+                   y="62.0">
+            <effect>
+                <InnerShadow height="1.0" offsetX="1.0" offsetY="1.0" radius="0.0" width="1.0"/>
+            </effect>
+        </Rectangle>
+        <Rectangle fx:id="base" height="6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.05" styleClass="metal"
+                   width="36.0" y="80.0">
+            <effect>
+                <Reflection bottomOpacity="0.1" fraction="1.0" topOffset="-10.0" topOpacity="0.8">
+                    <input>
+                        <DropShadow blurType="GAUSSIAN" color="#00000080" height="9.5" offsetY="3.0" radius="4.375"
+                                    width="10.0"/>
+                    </input>
+                </Reflection>
+            </effect>
+        </Rectangle>
+    </children>
+</Group>

@@ -1,0 +1,5 @@
+
+.popover > .border {
+    -fx-stroke-width: 2.0;
+    -fx-fill: #222 !important;
+}

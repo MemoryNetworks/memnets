@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<AnchorPane fx:id="skinPane" maxWidth="-Infinity" prefWidth="310.0" styleClass="property-editor"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TableView fx:id="skinTable" editable="true" maxWidth="320.0" prefHeight="139.0" tableMenuButtonVisible="true"
+                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="C1"/>
+                <TableColumn prefWidth="75.0" text="C2"/>
+            </columns>
+        </TableView>
+        <AnchorPane fx:id="skinPropPane" prefHeight="200.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="139.0">
+            <padding>
+                <Insets top="16.0"/>
+            </padding>
+        </AnchorPane>
+    </children>
+    <padding>
+        <Insets top="1.0"/>
+    </padding>
+    <stylesheets>
+        <URL value="@param-editor.css"/>
+        <URL value="@property-editor.css"/>
+    </stylesheets>
+</AnchorPane>

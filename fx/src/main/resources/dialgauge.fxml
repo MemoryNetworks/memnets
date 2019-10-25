@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.text.*?>
+<StackPane stylesheets="@gauge.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                   prefHeight="132.0" prefWidth="132.0" snapToPixel="false" stylesheets="@gauge.css">
+            <children>
+                <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                      prefHeight="132.0" prefWidth="132.0" StackPane.alignment="CENTER">
+                    <children>
+                        <Arc fx:id="arc" centerX="66.0" centerY="66.0" fill="TRANSPARENT" length="4.0" radiusX="56.0"
+                             radiusY="56.0" startAngle="88.0" stroke="#fafafa" strokeLineCap="BUTT" strokeWidth="10.0"/>
+                        <Arc fx:id="arcThresh" cache="true" centerX="66.0" centerY="66.0" fill="TRANSPARENT"
+                             length="20.0" radiusX="56.0" radiusY="56.0" startAngle="80.0" stroke="#00ff8880"
+                             strokeWidth="10.0"/>
+                        <Arc fx:id="arcGlass" cache="true" centerX="66.0" centerY="66.0" fill="TRANSPARENT"
+                             length="270.0" pickOnBounds="true" radiusX="56.0" radiusY="56.0" startAngle="-45.0"
+                             stroke="#ffffff26" strokeWidth="10.0"/>
+                    </children>
+                </Pane>
+                <Text fx:id="gaugeText" fill="#ffffffe5" fontSmoothingType="LCD" stroke="#00000080" text="5000"
+                      StackPane.alignment="CENTER">
+                    <font>
+                        <Font name="Tahoma" size="21.0"/>
+                    </font>
+                    <StackPane.margin>
+                        <Insets top="45.0"/>
+                    </StackPane.margin>
+                </Text>
+                <Text fx:id="angleText" fill="#ffffffe5" fontSmoothingType="LCD" stroke="#000000cc" text="0.0"
+                      StackPane.alignment="CENTER">
+                    <StackPane.margin>
+                        <Insets bottom="60.0"/>
+                    </StackPane.margin>
+                    <font>
+                        <Font name="Tahoma" size="23.0"/>
+                    </font>
+                </Text>
+                <Text fx:id="labelText" cache="true" fill="WHITE" fontSmoothingType="LCD" stroke="#00000080"
+                      text="Target" StackPane.alignment="CENTER">
+                    <font>
+                        <Font name="Tahoma Bold" size="19.0"/>
+                    </font>
+                    <StackPane.margin>
+                        <Insets bottom="6.0"/>
+                    </StackPane.margin>
+                    <effect>
+                        <InnerShadow choke="0.4" color="#000000b2" height="3.0" offsetY="1.5" radius="1.5" width="5.0"/>
+                    </effect>
+                </Text>
+            </children>
+        </StackPane>
+    </children>
+</StackPane>

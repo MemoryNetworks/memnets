@@ -1,0 +1,29 @@
+// description of data
+// v=vowels c=consonant
+
+// following are based on 1st letter of each word
+perc_start_v	continuous 		0.089, 0.455 	// percentage of words that start with vowel
+c2c				continuous		0.464, 0.902	// Markov transition consonants to consonants
+c2v				continuous		0.098, 0.536	// Markov transition consonants to vowels
+v2c				continuous		0.393, 1	// Markov transition vowels to consonants 
+v2v				continuous		0, 0.607	// Markov transition vowels to vowels
+
+// word length bins 
+// bin1 = 2^1 : #letters <= 2 
+// bin2 = 2^2 : 2 < #letters <= 4 
+// bin3 = 2^3  : 4 < #letters <= 8 
+// bin4 = 2^4+ : 8 < #letters
+// using rough estimate of 0.25 since 4 bins , so making categories based on +/- .05 
+// "low"  = x < 0.2 
+// "med"  = 0.2 <= x <= 0.3 
+// "high" = 0.3 < x 
+perc_bin1	    discrete		low,med,high	// percentage in bin 1  
+perc_bin2		discrete		low,med,high	// percentage in bin 2 
+perc_bin3       discrete        low,med,high    // percentage in bin 3
+perc_bin4       discrete        low,med,high    // percentage in bin 4
+
+// "reduced" word : keep first letter, removed all vowels
+perc_red		continuous		0.818, 1	// percentage unique reduced words to unique words	
+perc_amb		continuous		0, 0.406	// percentage ambiguous based on reduced word collisions    
+
+language        output          english, french

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+<AnchorPane fx:id="libraryPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ToggleButton fx:id="sciToggle" contentDisplay="TEXT_ONLY" mnemonicParsing="false" prefHeight="32.0"
+                      prefWidth="118.0" selected="true" styleClass="dark-grey-btn" text="SCI"
+                      AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+        <ToggleButton fx:id="gameToggle" contentDisplay="TEXT_ONLY" mnemonicParsing="false" prefHeight="32.0"
+                      prefWidth="118.0" styleClass="dark-grey-btn" text="GAME*" AnchorPane.leftAnchor="124.0"
+                      AnchorPane.topAnchor="0.0"/>
+        <ComboBox fx:id="authorCombo" prefHeight="32.0" prefWidth="170.0" promptText="Select an Author...."
+                  AnchorPane.leftAnchor="72.0" AnchorPane.topAnchor="40.0"/>
+        <Button fx:id="clearBtn" mnemonicParsing="false" prefHeight="32.0" text="CLEAR" AnchorPane.leftAnchor="0.0"
+                AnchorPane.topAnchor="40.0"/>
+        <Text fx:id="branchLabel" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0"
+              styleClass="choose-header" text="BRANCH" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="80.0">
+            <font>
+                <Font name="Verdana" size="20.0"/>
+            </font>
+        </Text>
+        <Text fx:id="tagLabel" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="choose-header" text="TAGS"
+              AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Verdana" size="20.0"/>
+            </font>
+        </Text>
+        <Text fx:id="modelLabel" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0"
+              styleClass="choose-header" text="MODEL" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font name="Verdana" size="20.0"/>
+            </font>
+        </Text>
+        <ListView fx:id="branchList" prefHeight="200.0" prefWidth="240.0" AnchorPane.bottomAnchor="300.0"
+                  AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="120.0"/>
+        <ListView fx:id="tagList" prefHeight="400.0" prefWidth="240.0" AnchorPane.bottomAnchor="300.0"
+                  AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="40.0"/>
+        <ListView fx:id="builderList" layoutX="270.0" layoutY="50.0" prefHeight="310.0" prefWidth="255.0"
+                  AnchorPane.bottomAnchor="300.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0"/>
+        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                   prefHeight="290.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0">
+            <children>
+                <Text fx:id="selectedLabel" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="choose-header"
+                      text="SELECTED MODEL" StackPane.alignment="TOP_CENTER">
+                    <font>
+                        <Font name="Verdana" size="20.0"/>
+                    </font>
+                </Text>
+                <TextArea fx:id="descTextArea" editable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                          minHeight="-Infinity" minWidth="-Infinity" prefHeight="245.0" prefWidth="515.0"
+                          promptText="Description of selected model above..." styleClass="text-area-dark"
+                          wrapText="true" StackPane.alignment="BOTTOM_LEFT"/>
+                <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                      minWidth="-Infinity" prefHeight="245.0" spacing="5.0" StackPane.alignment="BOTTOM_RIGHT">
+                    <children>
+                        <Text fx:id="tagLabel11" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="choose-header2"
+                              text="TAGS" StackPane.alignment="TOP_CENTER">
+                            <font>
+                                <Font name="Verdana" size="20.0"/>
+                            </font>
+                        </Text>
+                        <ListView fx:id="builderTagsList" maxHeight="-Infinity" maxWidth="-Infinity"
+                                  mouseTransparent="true" prefHeight="150.0" prefWidth="240.0"
+                                  StackPane.alignment="BOTTOM_CENTER"/>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="choose-header2" text="Author"/>
+                        <Text fx:id="authorLabel" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="choose-author"
+                              text="MemNets" wrappingWidth="240.0"/>
+                    </children>
+                    <StackPane.margin>
+                        <Insets/>
+                    </StackPane.margin>
+                    <padding>
+                        <Insets top="-5.0"/>
+                    </padding>
+                </VBox>
+            </children>
+        </StackPane>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="15.0" top="10.0"/>
+    </padding>
+    <stylesheets>
+        <URL value="@library.css"/>
+        <URL value="@texture.css"/>
+        <URL value="@textarea-dark.css"/>
+    </stylesheets>
+</AnchorPane>

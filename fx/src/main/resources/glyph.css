@@ -1,0 +1,20 @@
+.toggle-button:selected > .glyph-font .text {
+// moderna -fx-fill: radial-gradient(center 50% 50%,radius 70%,#88e 0%,#55b 100%);
+ -fx-opacity: 0.8;
+ -fx-fill: radial-gradient(center 50% 50%,radius 50%,-fx-memnets-highlight 0%,-fx-memnets 100%);
+}
+.toggle-button:selected > .glyph-font:hover .text {
+ -fx-opacity: 1.0;
+}
+.glyph-font .text {
+ -fx-opacity: 0.4;
+ -fx-fill: radial-gradient(center 50% 50%,radius 50%,#fff 0%,#aaa 100%);
+}
+.glyph-font:hover .text {
+ -fx-opacity: 1.0;
+}
+.fawesome {
+ -fx-scale-y: 0.97;
+ -fx-translate-y: -0.5;
+}
+

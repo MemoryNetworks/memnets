@@ -1,0 +1,21 @@
+#editPane {
+  -fx-base: #111;
+  -fx-font-family: "Tahoma";
+  -fx-focus-color: rgba(3,115,198,0.5);
+  -fx-background-color: derive(-fx-base,-10%);
+  -fx-control-inner-background: derive(-fx-base,+10%);
+
+//  -fx-accent: #0373c6;
+  -fx-accent: rgba(3,115,198,0.5);
+}
+.text {
+  -fx-font-smoothing-type: lcd;
+  -fx-text-alignment: center;
+  -fx-fill: derive(-fx-base,+90%);
+  -fx-font-smoothing-type: lcd;
+}
+.tooltip {
+  -fx-opacity: 0.8;
+  -fx-background-color: linear-gradient(#444, #222);
+  -fx-font: bold 14 Tahoma;
+}

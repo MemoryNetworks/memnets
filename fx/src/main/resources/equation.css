@@ -1,0 +1,28 @@
+.matrix-row {
+  -fx-font-size: 16pt;
+  -fx-font-family: "Verdana";
+  -fx-font-weight: bold;
+  -fx-font-smoothing-type: lcd;
+  -fx-fill: #fff;
+  -fx-opacity: 0.3;
+  -fx-alignment: CENTER;
+}
+.matrix-second {
+  -fx-font-style: italic;
+  -fx-fill: #aaa;
+  -fx-font-size: 14pt;
+}
+.matrix-row-head {
+  -fx-font-style: italic;
+}
+.matrix-row-head-sel {
+  -fx-font-style: italic;
+  -fx-opacity: 1.0;
+}
+.matrix-row-sel {
+  -fx-opacity: 0.6;
+}
+.radial {
+  -fx-background-color: radial-gradient(center 50% 50%,radius 75%,rgba(82,82,82,0.9) 0%,rgba(0,0,0,1.0) 100%);
+}
+

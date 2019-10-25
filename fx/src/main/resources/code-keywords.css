@@ -1,0 +1,74 @@
+.code-area {
+    -fx-background-color: #2B2B2B;  // black screws up for some reason...
+// -rtfx-background-color: grey;
+}
+.text-default {
+  -fx-fill: #A9B7C6;
+}
+.number {
+  -fx-fill: #6897BB;
+}
+.keyword {
+    -fx-fill: #CB772F;
+    -fx-font-weight: bold;
+}
+.constant {
+    -fx-fill: #9876AA;
+}
+.dsl {
+  // memcol
+    -fx-fill: #8C5FD2;
+    -fx-font-weight: bold;
+}
+.semicolon {
+    -fx-font-weight: bold;
+}
+.paren {
+    -fx-fill: #808080;
+    -fx-font-weight: bold;
+}
+.bracket {
+    -fx-fill: #858585;
+    -fx-font-weight: bold;
+}
+.brace {
+    -fx-fill: #A9B7C6;
+    -fx-font-weight: bold;
+}
+.string {
+  //  -fx-fill: #A5C25C;
+    -fx-fill: #84B977;
+}
+.comment {
+	-fx-fill: #808080;
+}
+.multi {
+	-fx-fill: #629755;
+}
+.caret {
+  -fx-stroke-width: 3;
+  -fx-stroke: #aaa;
+}
+.lineno {
+  -fx-background-color: #363636;
+  -fx-fill: #A9B7C6;
+}
+.paragraph-box:has-caret {
+  -fx-background-color: #3F3F3F;
+}
+
+.main-selection {
+ // -fx-fill: white;
+  -fx-opacity: 0.3; // default is way too bright
+}
+
+/*
+.line-highlighter {
+  -fx-opacity: 0.2;
+  -fx-background-color: green;
+    -fx-fill: green;
+ }
+.paragraph-text {
+  -fx-highlight-fill: red;
+}
+*/
