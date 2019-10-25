@@ -2,7 +2,7 @@
 
 MemNets is a framework for numerical simulations and games written in Scala, with Kotlin and Java friendly bindings. 
 
-The latest release is 1.0.0, which is cross-built against 2.12, and 2.13
+The latest release is 1.0.0, which is cross-built against 2.12 and 2.13
 
 *not published to Maven Central yet.  coming soon*
 
@@ -56,7 +56,7 @@ libraryDependencies  ++= Seq(
   "com.memnets" %% "fx" % "1.0.0"
 )
 ```
-(other jars are not published.  can use `sbt publishLocal`)
+*other jars are not published.  can use `sbt publishLocal`*
 
 ### Maven
 
