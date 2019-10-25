@@ -14,7 +14,7 @@ object Common {
 
   // fx8 is the easier default.  no java runtime flags (--module) needed.
   val FxVersion = fx8
-  // val FxVersion = fx12
+ //  val FxVersion = fx12
 
   // if not using the default, please see "javafx11plus runtime args.txt"
 
@@ -172,7 +172,7 @@ object Common {
       Resolver.typesafeRepo("releases"),
       Resolver.jcenterRepo
     )
-  )
+  ) ++ mavenCentralSettings
 
   // Metadata needed by Maven Central
   // See also http://maven.apache.org/pom.html#Developers
