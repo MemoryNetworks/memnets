@@ -69,7 +69,7 @@ libraryDependencies  ++= Seq(
 
 ### Maven
 
-Add these lines (or only the ones you need) to your project.  Append 2.12 or 2.13... 
+Add these lines (or only the ones you need) to your project. 
 
 ```xml
 <dependency>
