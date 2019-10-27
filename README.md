@@ -43,6 +43,8 @@ Building an oscillator using the sparse variable DSL:
 The latest release is 1.0.0
    * JavaFX 8 (default) uses scala 2.12 
    * JavaFX 12 cross-built against scala 2.12 and 2.13 
+   
+*NOTE: currently only supports 2.13.0.  In 2.13.1, the same call to ScriptEngineManager that works in 2.12.x and 2.13.0 blows up*
 
 *not published to Maven Central yet.  coming soon*
 
@@ -57,12 +59,14 @@ libraryDependencies  ++= Seq(
   // for JavaFX 8 (default)
   "com.memnets" %% "fx" % "1.0.0"
   // for JavaFX 12
-  // "com.memnets" %% "fx" % "1.0.0_12.0.2"
+  // "com.memnets" %% "fx" % "1.0.0-12.0.2"
 )
 ```
 *other jars are not published.  can use `sbt publishLocal`*
 
 ### Maven
+
+Add these lines (or only the ones you need) to your project.  Append 2.12 or 2.13... 
 
 ```xml
 <dependency>
@@ -75,7 +79,26 @@ libraryDependencies  ++= Seq(
   <artifactId>memnets-models_2.12</artifactId>
   <version>1.0.0</version>
 </dependency>
-...
+<dependency>
+  <groupId>com.memnets</groupId>
+  <artifactId>memnets-awt_2.12</artifactId>
+  <version>1.0.0</version>
+</dependency>           
+// JavaFX 8
+<dependency>
+  <groupId>com.memnets</groupId>
+  <artifactId>memnets-fx_2.12</artifactId>
+  <version>1.0.0</version>
+</dependency>  
+<!--
+// JavaFX 12   
+<dependency>
+  <groupId>com.memnets</groupId>
+  <artifactId>memnets-fx_2.12</artifactId>
+  <version>1.0.0-12.0.2</version>
+</dependency>
+-->    
+
 ```
 
 ## Documentation
