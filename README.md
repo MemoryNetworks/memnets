@@ -40,11 +40,14 @@ Building an oscillator using the sparse variable DSL:
 ```
 ------------
 
-The latest release is 1.0.0
-   * JavaFX 8 (default) uses scala 2.12 
-   * JavaFX 12 cross-built against scala 2.12 and 2.13 
+The latest release is 1.0.0 using scala 2.12
+   * JavaFX 8 (default)  
+   * JavaFX 12 
    
-*NOTE: currently only supports 2.13.0.  In 2.13.1, the same call to ScriptEngineManager that works in 2.12.x and 2.13.0 blows up*
+SBT build also supports 2.13.0
+
+*See [Build.scala](https://github.com/MemoryNetworks/memnets/blob/master/project/Build.scala) `crossScalaVersions` for info on issue with 2.13.1*
+
 
 *not published to Maven Central yet.  coming soon*
 
