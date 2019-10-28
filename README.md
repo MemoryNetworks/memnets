@@ -15,7 +15,7 @@ Building an oscillator using the sparse variable DSL:
     val y = Y(name = "y")
     val x = Y(name = "x", decay = -dampen)  // y'' = -dampen * y'
 
-    x --> y                             // y' = x
+    x --> y                   // y' = x
     y --> x w = -freq * freq  // y'' = - f^2 * y
 
     // can specify what the time chart shows on top or let the system guess
