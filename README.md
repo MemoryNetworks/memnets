@@ -1,6 +1,4 @@
 # The MemNets Framework
-
- [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.memnets/memnets-api_2.12/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.scalafx/scalafx_2.11)
   
 MemNets is a framework for numerical simulations and games written in Scala, with Kotlin and Java friendly bindings. 
 
