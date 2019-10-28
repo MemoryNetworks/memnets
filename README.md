@@ -1,5 +1,7 @@
 # The MemNets Framework
 
+ [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.memnets/memnets-api_2.12/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.scalafx/scalafx_2.11)
+  
 MemNets is a framework for numerical simulations and games written in Scala, with Kotlin and Java friendly bindings. 
 
 ## Example 
@@ -44,13 +46,6 @@ The latest release is 1.0.0 using scala 2.12
    * JavaFX 8 (default)  
    * JavaFX 12 
    
-SBT build also supports 2.13.0
-
-*See [Build.scala](https://github.com/MemoryNetworks/memnets/blob/master/project/Build.scala) `crossScalaVersions` for info on issue with 2.13.1*
-
-
-*not published to Maven Central yet.  coming soon*
-
 ### SBT
 
 Add these lines (or only the ones you need) to your SBT project definition 
@@ -66,6 +61,13 @@ libraryDependencies  ++= Seq(
 )
 ```
 *other jars are not published.  can use `sbt publishLocal`*
+
+SBT build also supports cross-compiling with 2.13.0  
+
+Any code contributions most compile on 2.12 + 2.13   
+
+*See [Build.scala](https://github.com/MemoryNetworks/memnets/blob/master/project/Build.scala) `crossScalaVersions` for info on issue with 2.13.1*
+
 
 ### Maven
 

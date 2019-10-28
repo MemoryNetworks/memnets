@@ -14,7 +14,7 @@ object Common {
 
   // fx8 is the easier default.  no java runtime flags (--module) needed.
   val FxVersion = fx8
- //  val FxVersion = fx12
+  //val FxVersion = fx12
 
   // if not using the default, please see "javafx11plus runtime args.txt"
 
@@ -73,7 +73,7 @@ object Common {
     organization := "com.memnets",
     version := MemNetsVersion,
     crossScalaVersions := {
-      // 2.13.x only works with fx12
+      // 2.13 only works with fx12
       // 2.13.1 has major bug: call to ScriptManager.getEngine("scala") blows up
       FxVersion match {
         case `fx12` =>
@@ -83,7 +83,7 @@ object Common {
           Seq("2.12.9")
       }
     },
-    scalaVersion := crossScalaVersions.value.last,
+    scalaVersion := crossScalaVersions.value.head,
     // gathers all dependent jars locally in /lib_managed
     retrieveManaged := true,
     autoAPIMappings := true,
